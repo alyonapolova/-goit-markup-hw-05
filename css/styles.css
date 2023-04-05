@@ -574,30 +574,27 @@ img {
   color: var(--main-text-color);
 }
 
-.try {
+.works-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.works-card-text {
   position: absolute;
-  z-index: 1;
-  width: 360px;
-  height: 300px;
-  background-color: var(--logo-effect);
   top: 0;
   left: 0;
-  opacity: 0;
+  padding: 40px 32px 164px 32px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  background-color: var(--logo-effect);
   transform: translateY(100%);
   transition-property: transform, opacity;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.try-text {
-  padding: 40px 32px 164px 32px;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #f4f4fd;
-}
-
-.works-link:hover .try {
+.works-link:hover .works-card-text {
   transform: translateY(0);
-  opacity: 1;
 }
