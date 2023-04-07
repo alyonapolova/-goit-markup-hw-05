@@ -66,6 +66,7 @@ img {
   padding-top: 120px;
   padding-bottom: 120px;
 }
+
 /** -----------------------HEADER---------------------- */
 .header {
   background-color: var(--white);
@@ -126,6 +127,22 @@ img {
 }
 .header-link:is(:hover, :focus) {
   color: var(--hover-color);
+}
+.header-link.current {
+  color: var(--hover-color);
+}
+
+.header-link.current::after {
+  position: absolute;
+  content: '';
+  display: block;
+  height: 4px;
+  width: 100%;
+  bottom: -1px;
+  left: 0;
+  border-radius: 4px;
+  background-color: var(--hover-color);
+  opacity: 1;
 }
 
 .header-link::after {
@@ -642,6 +659,7 @@ img {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .is-hidden {
