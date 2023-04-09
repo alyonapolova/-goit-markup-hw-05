@@ -133,15 +133,6 @@ img {
 }
 
 .header-link.current::after {
-  position: absolute;
-  content: '';
-  display: block;
-  height: 4px;
-  width: 100%;
-  bottom: -1px;
-  left: 0;
-  border-radius: 4px;
-  background-color: var(--hover-color);
   opacity: 1;
 }
 
@@ -660,8 +651,13 @@ img {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  fill: var(--main-title-color);
 }
-
+.btn-modal:is(:hover, :focus) {
+  background-color: var(--hover-color);
+  fill: var(--white);
+  border-color: transparent;
+}
 .is-hidden {
   opacity: 0;
   visibility: hidden;
